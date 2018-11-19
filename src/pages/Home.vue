@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <header>
+    <head-top :head-title="loginWay? '登录':'密码登录'" goBack="true">
+      <!-- <div slot="changeLogin" class="change_login" @click="changeLoginWay">{{loginWay? "密码登录":"短信登录"}}</div> -->
+    </head-top>
+
       <ul>
         <li><router-link to="/city">city</router-link></li>
         <li><router-link to="/user-center">user-center</router-link></li>
@@ -8,7 +11,6 @@
         <li>{{msg}}</li>
         <li>{{msg}}</li>
       </ul>
-    </header>
 
     <div class="content">
       <div class="left-index">
@@ -19,19 +21,24 @@
       </div>
     </div>
 
-    <footer>
-      @2018 喜帖
-    </footer>
+    <footer-guild></footer-guild>
   </div>
 </template>
 
 <script>
+  import headTop from '../components/header/head'
+  import footerGuild from '../components/footer/footGuide'
 export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      loginWay: false,
     }
+  },
+  components: {
+    headTop,
+    footerGuild,
   }
 }
 </script>

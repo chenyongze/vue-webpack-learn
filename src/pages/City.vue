@@ -26,26 +26,25 @@
         alertTip
       },
 
-        mounted(){
+      mounted(){
 
-          // setStore("yongze.chen",'ok---test');
+        // setStore("yongze.chen",'ok---test');
+        // this.cityid = this.$route.params.cityid;
+        this.cityid = 1;
+        //获取当前城市名字
+        currentcity().then(res => {
+          console.log(res);
+          this.cityname = res.data.name;
+        })
 
-          // this.cityid = this.$route.params.cityid;
-          this.cityid = 1;
-          //获取当前城市名字
-          currentcity().then(res => {
-            console.log(res);
-            this.cityname = res.data.name;
-          })
-
-          console.log(currentcityx().then( res=> {
-            console.log(res);
-            this.cityNamex = res.name;
-            // this.showAlert = true;
-            // this.alertText = '请输入正确的账号';
-          }));
-          // this.initData();
-        },
+        console.log(currentcityx().then( res=> {
+          console.log(res);
+          this.cityNamex = res.name;
+          // this.showAlert = true;
+          // this.alertText = '请输入正确的账号';
+        }));
+        // this.initData();
+      },
       methods: {
         async showmea (){
             this.cityNamex = getStore('yongze.chen');
@@ -55,6 +54,11 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "../style/mixin";
+  .city {
+    @include bis("https://avatar.csdn.net/1/C/1/3_maindek.jpg")
+
+  }
 
 </style>
