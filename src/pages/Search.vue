@@ -16,6 +16,7 @@
       data() {
           return {
             msg: 'search',
+            loginWay: false,
 
           }
       },

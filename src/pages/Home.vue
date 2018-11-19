@@ -4,20 +4,26 @@
 
     <div class="home_content">
       <ul>
-        <li>
+
+        <li v-for="item in list">
+          <router-link :to="{
+          path:'/detail',query:{}
+          }">
           <div class="content_left">
-            <img src="../images/activity.png" alt="">
+            <img :src="item.img_url" alt="">
           </div>
           <div class="content_right">
             <div class="content_right_title">
-              北京顺义旺泉街道吹响“河长哨”，七分干渠垃圾少了水清了
+              {{item.title}}
             </div>
             <div class="content_right_span">
-              <span>北京日报客户端</span>
-              <span>15:29</span>
+              <span>{{item.comp}}</span>
+              <span>{{item.timex}}</span>
             </div>
           </div>
+          </router-link>
         </li>
+
       </ul>
     </div>
 
@@ -28,16 +34,24 @@
 <script>
   import headTop from '../components/header/head'
   import footerGuild from '../components/footer/footGuide'
+  import {newList} from '../service/getData'
   export default {
     name: 'Home',
     data () {
       return {
         loginWay: false,
+        list:[],
       }
     },
     components: {
       headTop,
       footerGuild,
+    },
+    mounted() {
+      newList().then( res => {
+        this.list = res.list;
+      });
+      console.log(this.list)
     }
   }
 </script>

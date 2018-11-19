@@ -36,6 +36,8 @@ export const currentcity = () => fetch('/api/v5.game/citys',{},'GET');
 
 export const currentcityx = () => fetch('/v1/cities');
 
+export const newList = () => fetch('/v1/news');
+
 
 
 

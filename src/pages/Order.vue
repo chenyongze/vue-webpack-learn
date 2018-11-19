@@ -13,9 +13,11 @@
   import footerGuild from '../components/footer/footGuide'
     export default {
         name: "Order",
+
       data() {
           return {
             msg: 'order',
+            loginWay: false,
 
           }
       },

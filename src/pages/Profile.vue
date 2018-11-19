@@ -13,7 +13,8 @@
         name: "profile",
         data() {
           return {
-            'msg': "userCenter"
+            msg: "userCenter",
+            loginWay: false,
           }
         },
       components: {
