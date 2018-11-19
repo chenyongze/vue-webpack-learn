@@ -10,17 +10,37 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+
+    // 代理配置表，在这里可以配置特定的请求代理到对应的API接口
+    // 例如将'localhost:8080/api/xxx'代理到'www.example.com/api/xxx'
+    // 使用方法：https://vuejs-templates.github.io/webpack/proxy.html
+    proxyTable: {
+      '/api': {
+        target: 'http://l.o.io', // 接口的域名
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        changeOrigin: true, // 如果接口跨域，需要进行这个参数配置
+        pathRewrite: {
+          '^/api': '/api'
+        },
+      },
+      '/v1': {
+        target: 'https://dsn.apizza.net/mock/df0eec3b890342b6eb84f7109a7bb103', // 接口的域名
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        changeOrigin: true, // 如果接口跨域，需要进行这个参数配置
+        pathRewrite: {
+          '^/v1': '/v1'
+        },
+      },
+
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8003, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
-    
     /**
      * Source Maps
      */

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Detail from '@/components/Detail'
-import UserCenter from '@/components/UserCenter'
 import {routerMode} from '@/config/env'
+import Home from '@/pages/Home'
+import Detail from '@/pages/Detail'
+import UserCenter from '@/pages/UserCenter'
+import City from '@/pages/City'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/user-center',
       name: 'UserCenter',
       component: UserCenter,
+    },
+    {
+      path: '/city',
+      name: 'city',
+      component: City,
     },
   ]
 })
