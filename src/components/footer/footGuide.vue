@@ -85,7 +85,7 @@
     z-index: 100;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: .1rem;
     @include wh(100%, 1.95rem);
     display: flex;
     box-shadow: 0 -0.026667rem 0.053333rem rgba(0,0,0,.1);

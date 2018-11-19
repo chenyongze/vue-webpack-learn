@@ -63,6 +63,7 @@
   }
   li {
     float: left;
+    margin: .1rem 0;
     .content_left {
       float: left;
       width: 30%;
@@ -74,9 +75,9 @@
     }
     .content_right {
       float: left;
-      width: 60%;
+      width: 65%;
       .content_right_title {
-        font-size: .8rem;
+        font-size: .6rem;
       }
       .content_right_span {
         font-size: .4rem;
@@ -84,6 +85,4 @@
 
     }
   }
-
-
 </style>
