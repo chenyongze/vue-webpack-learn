@@ -36,6 +36,9 @@ export default new Router({
     {
       path: '/index',
       name: 'Home',
+      meta: {
+        title: '首页'
+      },
       component: home
     },
     {
@@ -49,21 +52,33 @@ export default new Router({
     {
       path: '/profile',
       name: 'Profile',
+      meta: {
+        title: '我的'
+      },
       component: profile,
     },
     {
       path: '/city',
       name: 'city',
+      meta: {
+        title: 'city'
+      },
       component: city,
     },
     {
       path: '/order',
       name: 'order',
+      meta: {
+        title: '订单'
+      },
       component: order,
     },
     {
       path: '/search/:keyword',
       name: 'search',
+      meta: {
+        title: '搜索'
+      },
       component: search,
     },
     {
