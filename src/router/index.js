@@ -5,6 +5,8 @@ import Home from '@/pages/Home'
 import Detail from '@/pages/Detail'
 import Profile from '@/pages/Profile'
 import City from '@/pages/City'
+import Order from '../pages/Order'
+import Search from '../pages/Search'
 
 Vue.use(Router)
 
@@ -49,6 +51,16 @@ export default new Router({
       path: '/city',
       name: 'city',
       component: City,
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: Order,
+    },
+    {
+      path: '/search/:keyword',
+      name: 'search',
+      component: Search,
     },
   ]
 })
