@@ -2,9 +2,9 @@
   <div class="home">
     <header>
       <ul>
-        <li>001</li>
-        <li>002</li>
-        <li>003</li>
+        <li><router-link to="/city">city</router-link></li>
+        <li><router-link to="/user-center">user-center</router-link></li>
+        <li><router-link to="/detail">Detail</router-link></li>
         <li>{{msg}}</li>
         <li>{{msg}}</li>
       </ul>

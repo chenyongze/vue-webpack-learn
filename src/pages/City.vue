@@ -1,7 +1,5 @@
 <template>
     <div class="city">
-      <!--{{cityname}}-->
-
       <span @click="showmea()">{{cityNamex}}</span>
       <alert-tip v-if="showAlert" :showHide="showAlert" @closeTip="closeTip" :alertText="alertText"></alert-tip>
     </div>
@@ -21,7 +19,6 @@
             alertText: null, //提示的内容
             msg: "city",
             cityid: 0,
-            cityname: 'a-b-c',
             cityNamex: 'a-b-c',
           }
         },
@@ -41,14 +38,9 @@
             this.cityname = res.data.name;
           })
 
-
-          let data = currentcityx();
-          console.log(data);
-
-
           console.log(currentcityx().then( res=> {
             console.log(res);
-            // this.cityNamex = res.name;
+            this.cityNamex = res.name;
             // this.showAlert = true;
             // this.alertText = '请输入正确的账号';
           }));
