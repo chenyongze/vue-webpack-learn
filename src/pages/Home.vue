@@ -37,7 +37,7 @@
   import {newList} from '../service/getData'
   export default {
     name: 'Home',
-    data () {
+    data() {
       return {
         loginWay: false,
         list:[],
