@@ -1,6 +1,13 @@
 <template>
     <div class="city">
       <span @click="showmea()">{{cityNamex}}</span>
+
+      <span>queryName::{{queryName}}</span>
+      <span>queryId:::{{queryId}}</span>
+      <span>{{$route.query.tmpVal}}</span>
+
+      <span @click="showmea()">{{cityNamex}}</span>
+
       <alert-tip v-if="showAlert" :showHide="showAlert" @closeTip="closeTip" :alertText="alertText"></alert-tip>
     </div>
 </template>
@@ -8,7 +15,7 @@
 <script>
 
   import {currentcity,currentcityx} from '../service/getData';
-  import alertTip from '@/components/common/alertTip.vue';
+  import alertTip from '@/components/common/alertTip';
   import {getStore, setStore, removeStore} from '../config/mUtils'
 
     export default {
@@ -20,6 +27,8 @@
             msg: "city",
             cityid: 0,
             cityNamex: 'a-b-c',
+            queryName: '',
+            queryId: 0,
           }
         },
       components:{
@@ -27,6 +36,9 @@
       },
 
       mounted(){
+        //query传参接收
+        this.queryName = this.$route.query.queryName;
+        this.queryId = this.$route.query.queryId;
 
         // setStore("yongze.chen",'ok---test');
         // this.cityid = this.$route.params.cityid;
@@ -57,7 +69,7 @@
 <style lang="scss" scoped>
   @import "../style/mixin";
   .city {
-    @include bis("https://avatar.csdn.net/1/C/1/3_maindek.jpg")
+    @include bis("../images/address_bottom.png")
 
   }
 

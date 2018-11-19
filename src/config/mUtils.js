@@ -274,3 +274,8 @@ export const animate = (element, target, duration = 400, mode = 'ease-out', call
         })
     }, 20);
 }
+
+// url 参数
+export const getUrlKey  = name => {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
+}

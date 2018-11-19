@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import {routerMode} from '@/config/env'
 import Home from '@/pages/Home'
 import Detail from '@/pages/Detail'
-import UserCenter from '@/pages/UserCenter'
+import Profile from '@/pages/Profile'
 import City from '@/pages/City'
 
 Vue.use(Router)
@@ -36,11 +36,14 @@ export default new Router({
       path: '/detail',
       name: 'Detail',
       component: Detail,
+      meta: {
+        title: "详情页面",
+      }
     },
     {
-      path: '/user-center',
-      name: 'UserCenter',
-      component: UserCenter,
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
     },
     {
       path: '/city',

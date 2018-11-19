@@ -24,7 +24,7 @@
     },
     props: ['alertText'],
     methods: {
-      closeTip(){
+      closeTip: function(){
         this.$emit('closeTip')
       }
     }

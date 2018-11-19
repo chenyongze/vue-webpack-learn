@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: "UserCenter",
+        name: "profile",
         data() {
           return {
             'msg': "userCenter"

@@ -20,9 +20,9 @@
 
       </defs>
     </svg>
-    <section @click = "gotoAddress({path: '/detail', query: {geohash}})" class="guide_item">
+    <section @click = "gotoAddress({path: '/index', query: {geohash}})" class="guide_item">
       <svg class="icon_style">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="$route.path.indexOf('detail') !== -1? '#msiteActive' : '#msite'"></use>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="$route.path.indexOf('index') !== -1? '#msiteActive' : '#msite'"></use>
       </svg>
       <span>详情</span>
     </section>
@@ -32,9 +32,9 @@
       </svg>
       <span>搜索</span>
     </section>
-    <section @click = "gotoAddress('/order')" class="guide_item">
+    <section @click = "gotoAddress('/detail')" class="guide_item">
       <svg class="icon_style">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="$route.path.indexOf('order') !== -1? '#orderActive' : '#order'"></use>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="$route.path.indexOf('detail') !== -1? '#orderActive' : '#order'"></use>
       </svg>
       <span>订单</span>
     </section>
