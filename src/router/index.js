@@ -12,6 +12,7 @@ const order = r => require.ensure([], () => r(require('../pages/Order')), 'order
 const profile = r => require.ensure([], () => r(require('../pages/Profile')), 'profile')
 const search = r => require.ensure([], () => r(require('../pages/Search')), 'search')
 const city = r => require.ensure([], () => r(require('../pages/City')), 'city')
+const card = r => require.ensure([], () => r(require('../pages/Card')), 'card')
 
 const test = r => require.ensure([], () => r(require('../pages/Test')), 'test')
 
@@ -82,6 +83,14 @@ export default new Router({
         title: 'test'
       },
       component: test,
+    },
+    {
+      path: '/card',
+      name: 'card',
+      meta: {
+        title: 'card'
+      },
+      component: card,
     },
     {
       path: '/search/:keyword',
