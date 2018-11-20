@@ -19,7 +19,7 @@ if ('addEventListener' in document) {
 
 Vue.config.productionTip = false
 
-// 处理页面title
+// 页面 title 处理
 router.beforeEach((to, from, next) => {
   window.document.title = to.meta.title;
   next()
@@ -28,8 +28,8 @@ router.beforeEach((to, from, next) => {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
-  store,
+  router:router,
+  store:store,
   components: { App },
   template: '<App/>'
 })
