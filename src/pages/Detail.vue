@@ -19,6 +19,8 @@
   import footerGuild from '../components/footer/footGuide'
   import alertTip from '../components/common/alertTip'
 
+  // import {store} from '../store/index'
+
     export default {
         name: "Detail",
         data(){
@@ -47,7 +49,12 @@
           })
 
         }
-      }
+      },
+
+      mounted() {
+        // store.commit('increment')
+        // console.log(store.state.count) // -> 1
+      },
     }
 </script>
 

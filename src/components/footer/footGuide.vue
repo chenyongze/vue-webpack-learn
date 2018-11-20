@@ -48,7 +48,7 @@
 </template>
 
 <script>
-  // import {mapState} from 'vuex'
+  import {mapState} from 'vuex'
   export default {
     data(){
       return{
@@ -62,9 +62,9 @@
 
     },
     computed: {
-      // ...mapState([
-      //   'geohash'
-      // ]),
+      ...mapState([
+        'geohash'
+      ]),
     },
     methods: {
       gotoAddress(path){

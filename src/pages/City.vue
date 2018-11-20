@@ -14,9 +14,10 @@
 
 <script>
 
-  import {currentcity,currentcityx} from '../service/getData';
-  import alertTip from '@/components/common/alertTip';
+  import {currentcity,currentcityx} from '../service/getData'
+  import alertTip from '@/components/common/alertTip'
   import {getStore, setStore, removeStore} from '../config/mUtils'
+  // import {store} from '../store'
 
     export default {
         name: "City",
@@ -56,6 +57,9 @@
           // this.alertText = '请输入正确的账号';
         }));
         // this.initData();
+
+        // store.commit('increment')
+        // console.log(store.state.count) // -> 1
       },
       methods: {
         async showmea (){
