@@ -13,6 +13,8 @@ const profile = r => require.ensure([], () => r(require('../pages/Profile')), 'p
 const search = r => require.ensure([], () => r(require('../pages/Search')), 'search')
 const city = r => require.ensure([], () => r(require('../pages/City')), 'city')
 
+const test = r => require.ensure([], () => r(require('../pages/Test')), 'test')
+
 Vue.use(Router)
 
 export default new Router({
@@ -72,6 +74,14 @@ export default new Router({
         title: '订单'
       },
       component: order,
+    },
+    {
+      path: '/test',
+      name: 'test',
+      meta: {
+        title: 'test'
+      },
+      component: test,
     },
     {
       path: '/search/:keyword',
