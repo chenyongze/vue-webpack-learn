@@ -4,9 +4,10 @@
     <div class="doc-title zan-hairline--bottom">CARD</div>
 
     <div class="zan-panel">
+
       <div class="zan-card">
         <div class="zan-card__thumb">
-          <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imagediv2/2/w/200/h/200/q/90/format/jpeg"/>
+          <img class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imagediv2/2/w/200/h/200/q/90/format/jpeg"/>
         </div>
         <div class="zan-card__detail">
           <div class="zan-card__detail-row">
@@ -28,6 +29,7 @@
           </div>
         </div>
       </div>
+
     </div>
 
   </div>

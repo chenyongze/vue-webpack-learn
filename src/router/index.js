@@ -14,7 +14,8 @@ const search = r => require.ensure([], () => r(require('../pages/Search')), 'sea
 const city = r => require.ensure([], () => r(require('../pages/City')), 'city')
 const card = r => require.ensure([], () => r(require('../pages/Card')), 'card')
 
-const test = r => require.ensure([], () => r(require('../pages/Test')), 'test')
+const testA = r => require.ensure([], () => r(require('../pages/test/A')), 'test')
+const testB = r => require.ensure([], () => r(require('../pages/test/B')), 'test')
 
 Vue.use(Router)
 
@@ -77,12 +78,20 @@ export default new Router({
       component: order,
     },
     {
-      path: '/test',
-      name: 'test',
+      path: '/test/a',
+      name: 'test-a',
       meta: {
-        title: 'test'
+        title: 'test-a'
       },
-      component: test,
+      component: testA,
+    },
+    {
+      path: '/test/b',
+      name: 'test-b',
+      meta: {
+        title: 'test-b'
+      },
+      component: testB,
     },
     {
       path: '/card',

@@ -76,6 +76,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 })
 
 module.exports = new Promise((resolve, reject) => {
+
   portfinder.basePort = process.env.PORT || config.dev.port
   portfinder.getPort((err, port) => {
     if (err) {
@@ -89,7 +90,10 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+          messages: [
+            `Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`,
+            `外部链接: http://${getIPAdress()}:${port}`
+          ],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()
@@ -100,3 +104,17 @@ module.exports = new Promise((resolve, reject) => {
     }
   })
 })
+
+// 获取本机IP
+const getIPAdress = () => {
+  var interfaces = require('os').networkInterfaces();
+  for(var devName in interfaces){
+    var iface = interfaces[devName];
+    for(var i=0;i<iface.length;i++){
+      var alias = iface[i];
+      if(alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal){
+        return alias.address;
+      }
+    }
+  }
+}
