@@ -9,6 +9,11 @@ import store from './store'
 // add rem
 import './config/rem'
 import FastClick from 'fastclick'
+
+// 添加 JQ   bootstrap
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+
 //延迟点击事件
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', function() {
@@ -18,6 +23,7 @@ if ('addEventListener' in document) {
 
 
 Vue.config.productionTip = false
+
 
 // 页面 title 处理
 router.beforeEach((to, from, next) => {
